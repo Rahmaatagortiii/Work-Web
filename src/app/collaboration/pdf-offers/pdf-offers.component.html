@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8" id="htmlData">
+      <table class="table table-bordered">
+        <tr class="table-primary">
+          <th>title</th>
+          <th>descrption</th>
+          <th>nplaces</th>
+          <th>starDateOf</th>
+        </tr>
+        <tr *ngFor="let item of o ">
+          <th>{{item.title}}</th>
+          <td>{{item.descrption}}</td>
+          <td>{{item.nplaces}}</td>
+          <td>{{item.starDateOf}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-4 text-right">
+      <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
+    </div>
+  </div>
+</div>

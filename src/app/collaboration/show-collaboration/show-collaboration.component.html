@@ -1,0 +1,25 @@
+
+<div class="a-box">
+  <div class="img-container">
+    <div class="img-inner">
+            <img *ngIf="data.imagesCollab"
+             [src]=data.imagesCollab.name
+            />
+          </div>
+    </div>
+  </div>
+  <div class="text-container">
+    <h3>{{data.name}}</h3>
+    <div>
+        {{data.description}}
+  </div>
+  <div>
+    {{data.email}}
+  </div>
+  <div>
+    {{data.date}}
+  </div>
+  <h3>
+    {{data.town}}
+  </h3>
+</div>

@@ -1,0 +1,105 @@
+<div id="content-page" class="content-page">
+    <div class="scroll-container">
+                <div>
+                    <form action="" enctype="multipart/form-data" (ngSubmit)="updateOffer()" #f="ngForm">
+                        <div>
+                            <p>Title</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="text" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.title"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>Descrption</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <textarea type="text" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.descrption"
+                                    [ngModelOptions]="{standalone: true}"></textarea>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>starDateOf</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="datetime-local" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.starDateOf"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div>
+                            <p> endDateOf</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="datetime-local" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.endDateOf"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <p>nplaces</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="number" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.nplaces"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>promotion</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="number" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.promotion"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>Pourcentage</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="number" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.percentage"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>location</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="text" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.localisation"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>prix</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="number" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="Offre.prix"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <select name="happy" [(ngModel)]="Offre.happy">
+                            <option value="HAPPY_HOUR">HAPPY_HOUR </option>
+                            <option value="HAPPY_DAYS">HAPPY_DAYS</option>
+                            <option value="BLACK_FRIDAY">BLACK_FRIDAY</option>
+                            <option value="PROMOTION">PROMOTION</option>
+                        </select>
+
+                        <p>Image</p>
+                        <input (change)="onFileSelected($event)" type="file" class="form-control-file"
+                            id="exampleFormControlFile1" />
+
+                        <div class="col-lg-4 row m-0 p-0">
+                            <button type="submit">Update</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,38 @@
+<p>blogs works!</p>
+<div class="row">
+    <!-- column -->
+
+    <div class="col-lg-3 col-md-6" *ngFor="let b of listPosts">
+      <!-- Card -->
+      <!-- ---------------------
+                        start Card title
+                    ---------------- -->
+      <div class="card">
+        <img
+          class="card-img-top img-responsive"
+          src="assets/images/bg/bg1.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h4 class="card-title">{{b.subject}}</h4>
+          <p class="card-text">
+            {{b.content.substring(0,85)}}
+          </p>
+          <p>{{getnbreactionByblog(b.id)}}</p>
+          <span class="mb-1 me-2 badge rounded-pill bg-dark" *ngFor="let t of b.tags">{{t}}</span>
+          
+          <div class="col-lg-1">
+            <button (click)="deleteBlog(b.id)" class="btn btn-danger">Delete</button>
+          
+          </div>
+          
+        </div>
+      </div>
+      <!-- ---------------------
+                        end Card title
+                    ---------------- -->
+      <!-- Card -->
+    </div>
+   
+    
+  </div>

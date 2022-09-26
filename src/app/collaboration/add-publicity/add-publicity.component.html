@@ -1,0 +1,40 @@
+<form (ngSubmit)="addPublicity()" #f="ngForm">
+  
+    <div class="segment">
+      <h1>Add Publicity</h1>
+    </div>
+    <label>
+      <input type="text" placeholder="Title"
+      [(ngModel)]="publicity.title" [ngModelOptions]="{standalone: true}"/>
+    </label>
+    <label>
+      <input type="text" placeholder="description"
+      [(ngModel)]="publicity.description" [ngModelOptions]="{standalone: true}"/>
+    </label>
+    <label>
+      <input type="date" placeholder="starDatePub"
+      [(ngModel)]="publicity.starDatePub" [ngModelOptions]="{standalone: true}"/>
+    </label>
+    <label>
+      <input type="date" placeholder="endDatePub"
+      [(ngModel)]="publicity.endDatePub" [ngModelOptions]="{standalone: true}"/>
+    </label>
+    <label>
+      <select (change)="onSelectOffer($event)">
+        <option [value]="off.idOffer" *ngFor="let off of offers">{{off.title}}
+        </option> </select>
+    </label>
+    
+    <div class="input-group">
+      <label>
+        <p>Image</p>
+        <input (change)="onFileSelected($event)"
+            type="file"
+            class="form-control-file"
+            id="exampleFormControlFile1"
+            />
+      </label>
+    </div>
+    <button class="red" type="submit"><i class="icon ion-md-lock"></i> Submit</button>
+    
+  </form>

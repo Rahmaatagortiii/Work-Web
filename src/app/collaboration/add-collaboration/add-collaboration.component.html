@@ -1,0 +1,61 @@
+<div style="position: relative;">
+<nav>
+  <a href="/collaboration/offers">Offer</a>
+  <a href="/collaboration/collaborations">collaboration</a>
+  <a href="/collaboration/EspaceQuiz">Quiz</a>
+  <div id="indicator"></div>
+</nav>
+</div>
+    <div class="main-block">
+      <div class="center-part">
+      </div>
+      <form action="" enctype="multipart/form-data" (ngSubmit)="addCollaboration()" #f="ngForm">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i>
+          <h2>Add Collaboration</h2>
+        </div>
+        
+        <div class="col-lg-6 row m-0 p-0">
+        <div id="post-modal-data" class="card card-block card-stretch card-height">
+          <p>name</p>
+          <input [(ngModel)]="collaboration.name" class="fname" type="text" name="name" placeholder=" name" [ngModelOptions]="{standalone: true}">
+         <br>
+          <p>email</p>
+          <input [(ngModel)]="collaboration.email"type="text" name="name" placeholder="Email" [ngModelOptions]="{standalone: true}">
+          <br>
+          <p>phone</p>
+          <input [(ngModel)]="collaboration.phone" type="text" name="name" placeholder="Phone number" [ngModelOptions]="{standalone: true}">
+          <br>
+          <p>description</p>
+          <br>
+          <input [(ngModel)]="collaboration.description"type="String" name="name" placeholder="description" [ngModelOptions]="{standalone: true}">
+          <br>
+          <p>date</p>
+          <input [(ngModel)]="collaboration.date"type="date" name="name" placeholder="dater" [ngModelOptions]="{standalone: true}">
+          <br>
+          <p>town</p>
+          <input [(ngModel)]="collaboration.town"type="String" name="name" placeholder="Town" [ngModelOptions]="{standalone: true}">
+          <br>
+          <p>rate</p>
+          <input [(ngModel)]="collaboration.rate"type="number" name="name" placeholder="rate" [ngModelOptions]="{standalone: true}">
+          <br>
+          <p>Image</p>
+          <input (change)="onFileSelected($event)"
+              type="file"
+              class="form-control-file"
+              id="exampleFormControlFile1"
+              />
+
+              <div [hidden]="captcha">
+                <p>Hello potential human...</p>
+                <re-captcha (resolved)="resolved($event)" siteKey="6LcP380fAAAAADF7ixLEMfZJ_nyAAOWNbOAvS1BI"></re-captcha>
+            </div>
+            <div [hidden]="!captcha">
+                <p>{{ "homrani.mahdi1998@gmail.com" }}</p>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+      </form>
+    </div>
+

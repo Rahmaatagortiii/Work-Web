@@ -1,0 +1,20 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<div class="container">
+
+	<div class="card">
+
+			<img *ngIf="data.imagesOffer"
+             [src]=data.imagesOffer.name
+            />
+			<figcaption class="card__caption">
+                <h4 class="card__snippet">{{data.nplaces}}</h4>
+				<h2 class="card__title">{{data.title}}</h2>
+				<p class="card__snippet">{{data.descrption}}</p>
+                <p class="card__snippet">{{data.starDateOf}}</p>
+                <p class="card__snippet">{{data.nplaces}}</p>
+			</figcaption>
+
+	</div>
+
+<p class="disclaimer">All pictures were taken from <a class="disclaimer__link" href="https://unsplash.com/" target="_blank">Unsplash.</a></p>
