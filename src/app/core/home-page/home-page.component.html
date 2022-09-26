@@ -1,0 +1,149 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<section>
+  <div class="gap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="page-contents" class="row merged20">
+            <div class="col-lg-3">
+              <aside class="sidebar static left">
+                <div class="widget whitish low-opacity">
+                  <img src="assets/images/time-clock.png" alt="" />
+                  <div
+                    class="bg-image"
+                    style="
+                      background-image: url(assets/images/resources/time-bg.jpg);
+                    "
+                  ></div>
+                  <div class="date-time">
+                    <div class="realtime">
+                      <span id="hours">00</span>
+                      <span id="point">:</span>
+                      <span id="min">00</span>
+                    </div>
+                    <span id="date"></span>
+                  </div>
+                </div>
+                <app-complete-profile></app-complete-profile>
+                <div class="advertisment-box">
+                  <h4 class="">
+
+                  </h4>
+                  <figure>
+                    <app-advertisment-carousel></app-advertisment-carousel>
+                    <a href="#" title="Advertisment"
+                      ><img src="assets/images/resources/ad-widget2.gif" alt=""
+                    /></a>
+                  </figure>
+                </div>
+                <!-- adversment widget -->
+
+                <app-recent-blog></app-recent-blog>
+                <div class="widget">
+                  <h4 class="widget-title">
+                    Your profile has a new Experience section
+                  </h4>
+                  <p>
+                    Showcase your professional experience and education to help
+                    potential employers and collaborators find and contact you
+                    about career opportunities.
+                  </p>
+                  <a
+                    class="main-btn"
+                    href="profile.html"
+                    title=""
+                    data-ripple=""
+                    >view profile</a
+                  >
+                </div>
+                <!-- your profile -->
+                <app-links></app-links>
+              </aside>
+            </div>
+            <div class="col-lg-6">
+              <ul class="filtr-tabs">
+                <li><a class="active" href="#" title="">Home</a></li>
+                <li><a href="#" title="">Recent</a></li>
+                <li><a href="#" title="">Favourit</a></li>
+              </ul>
+              <!-- tab buttons -->
+              <app-create-post></app-create-post>
+              <app-stories></app-stories>
+              <app-chat-rooms></app-chat-rooms>
+              <app-share-post></app-share-post>
+
+              
+
+              <div class="loadmore">
+                <div class="sp sp-bars"></div>
+                <a href="#" title="" data-ripple="">Load More..</a>
+              </div>
+              <!-- loadmore buttons -->
+            </div>
+            <div class="col-lg-3">
+              <aside class="sidebar static right">
+                <div class="widget">
+                  <h4 class="widget-title">Your Groups</h4>
+                  <ul class="ak-groups">
+                    <li>
+                      <figure>
+                        <img
+                          src="assets/images/resources/your-group1.jpg"
+                          alt=""
+                        />
+                      </figure>
+                      <div class="your-grp">
+                        <h5>
+                          <a href="group-detail.html" title="">Good Group</a>
+                        </h5>
+                        <a href="#" title=""
+                          ><i class="icofont-bell-alt"></i>Notifilactions
+                          <span>13</span></a
+                        >
+                        <a href="group-feed.html" title="" class="promote"
+                          >view feed</a
+                        >
+                      </div>
+                    </li>
+                    <li>
+                      <figure>
+                        <img
+                          src="assets/images/resources/your-group2.jpg"
+                          alt=""
+                        />
+                      </figure>
+                      <div class="your-grp">
+                        <h5>
+                          <a href="group-detail.html" title=""
+                            >E-course Group</a
+                          >
+                        </h5>
+                        <a href="#" title=""
+                          ><i class="icofont-bell-alt"></i>Notifilactions
+                          <span>13</span></a
+                        >
+                        <a href="group-feed.html" title="" class="promote"
+                          >view feed</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Your groups -->
+
+                <app-qa-widget></app-qa-widget>
+                <app-event-widget></app-event-widget>
+                <div style="text-align: center;">
+                <app-weather-api></app-weather-api>
+              </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- content -->
+<app-footer></app-footer>

@@ -1,0 +1,86 @@
+<div class="main-wraper">
+    <span class="new-title">Create New Post</span>
+    <div class="new-post">
+        <form method="post">
+            <i class="icofont-pen-alt-1"></i>
+            <input type="text" placeholder="Create New Post">
+        </form>
+        <ul class="upload-media">
+            <li>
+                <a href="#" title="">
+                    <i><img src="assets/images/image.png" alt=""></i>
+                    <span>Photo/Video</span>
+                </a>	
+            </li>
+            <li>
+                <a href="#" title="">
+                    <i><img src="assets/images/activity.png" alt=""></i>
+                    <span>Feeling/Activity</span>
+                </a>	
+            </li>
+            <li>
+                <a href="live-stream.html" title="">
+                    <i><img src="assets/images/live-stream.png" alt=""></i>
+                    <span>Live Stream</span>
+                </a>	
+            </li>
+        </ul>
+    </div>
+</div><!-- create new post -->
+<div class="post-new-popup">
+    <div class="popup" style="width: 800px;">
+        <span class="popup-closed"><i class="icofont-close"></i></span>
+        <div class="popup-meta">
+            <div class="popup-head">
+                <h5><i>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></i>Create New Post</h5>
+            </div>
+            <div class="post-new">
+                <div class="post-newmeta">
+                    
+                    <form method="post" class="dropzone" action="/upload-target">
+                        <div class="fallback">
+                            <input name="file" type="file" multiple />
+                        </div>
+                    </form>
+                </div>	
+                <form method="post" class="c-form">
+                    <textarea id="emojionearea1" placeholder="What's On Your Mind?"></textarea>
+                    <div class="activity-post">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox" checked>
+                            <label for="checkbox"><span>Activity Feed</span></label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox2" checked>
+                            <label for="checkbox2"><span>My Story</span></label>
+                        </div>
+                    </div>
+                    <div class="select-box">
+                        <div class="select-box__current" tabindex="1">
+                            <div class="select-box__value"><input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked" />
+                                <p class="select-box__input-text"><i class="icofont-globe-alt"></i> Public</p>
+                            </div>
+                            <div class="select-box__value"><input class="select-box__input" type="radio" id="1" value="2" name="Ben" checked="checked" />
+                                <p class="select-box__input-text"><i class="icofont-lock"></i> Private</p>
+                            </div>
+                            <div class="select-box__value"><input class="select-box__input" type="radio" id="2" value="3" name="Ben" checked="checked" />
+                                <p class="select-box__input-text"><i class="icofont-user"></i> My department</p>
+                            </div>
+                            
+                            <img class="select-box__icon" src="assets/images/arrow-down.svg" alt="Arrow Icon" aria-hidden="true" />
+                        </div>
+                        <ul class="select-box__list">
+                            <li><label class="select-box__option" for="0"><i class="icofont-globe-alt"></i> Public</label></li>
+                            <li><label class="select-box__option" for="1"><i class="icofont-lock"></i> Private</label></li>
+                            <li><label class="select-box__option" for="2"><i class="icofont-user"></i> My department</label></li>
+                        </ul>
+                    </div>
+                    <input class="schedule-btn" type="text" id="datetimepicker" readonly>
+                    <input type="text" placeholder="https://www.youtube.com/watch?v=vgvsuiFlA-Y&t=56s">
+                    <button type="submit" class="main-btn">Publish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div><!-- New post popup -->
